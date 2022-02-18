@@ -1,0 +1,39 @@
+@import "../../variables.scss";
+
+.nav-container {
+  background-color: $blue;
+  height: 5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 3rem;
+
+  button {
+    background-color: $red;
+    border: none;
+    color: #fff;
+    width: 5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-family: $league-text;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: $blue;
+    cursor: pointer;
+  }
+
+  p {
+    font-family: $barstool-script;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+}

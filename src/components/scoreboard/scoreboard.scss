@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+
+.scoreboard-container {
+  width: 40rem;
+  border: 1px solid black;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Teko", sans-serif;
+  font-size: 1.75rem;
+
+  .home-container {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .away-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .team-name {
+    border-right: 1px solid #ccc;
+    padding: 0 1rem;
+    letter-spacing: 0.1rem;
+    width: 2rem;
+  }
+}
