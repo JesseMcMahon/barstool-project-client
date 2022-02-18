@@ -1,8 +1,8 @@
-import React from "react";
+import { React, useState } from "react";
 import axios from "axios";
 import "./navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({ setLeague }) => {
   const getStats = async (e) => {
     const url = `http://localhost:5000/api/${e.target.id}`;
     await axios({
@@ -10,7 +10,7 @@ const Navigation = () => {
       withCredentials: true,
       url: url,
     }).then((res) => {
-      console.log(res);
+      setLeague(res);
     });
   };
 
