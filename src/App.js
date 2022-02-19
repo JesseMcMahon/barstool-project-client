@@ -1,5 +1,5 @@
 import "./App.css";
-import Scoreboard from "./components/scoreboard/scoreboard";
+import MlbBoxscore from "./components/mlb-boxscore/mlb-boxscore";
 import Navigation from "./components/navigation/navigation";
 import { React, useState } from "react";
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Navigation setLeague={setLeague} />
-      <Scoreboard league={selectedLeague} />
+      <MlbBoxscore league={selectedLeague} />
     </div>
   );
 }
