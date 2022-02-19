@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .overview-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,7 @@
   width: fit-content;
   margin: 1rem auto;
   padding: 0 2rem;
+  padding-bottom: 2rem;
 
   .game-stats-container {
     display: flex;
@@ -73,11 +76,13 @@
     border-radius: 0px;
     width: 100%;
     padding: 0.5rem;
+    padding-bottom: 1.5rem;
 
     .game-stats-container {
       .team-container {
         .roster-container {
           .batter {
+            width: 350px;
             .player-name {
               width: 120px;
             }
