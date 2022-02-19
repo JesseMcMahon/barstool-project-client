@@ -2,6 +2,7 @@ import "./App.css";
 import Boxscore from "./components/boxscore/boxscore";
 import Navigation from "./components/navigation/navigation";
 import GameSummary from "./components/game-summary/game-summary";
+import MlbOverview from "./components/overview/mlb-overview";
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 
@@ -29,6 +30,9 @@ function App() {
           <Navigation setLeague={setLeague} />
           <GameSummary league={selectedLeague} />
           <Boxscore league={selectedLeague} />
+          {selectedLeague.data.league === "MLB" ? (
+            <MlbOverview league={selectedLeague} />
+          ) : null}
         </>
       ) : null}
     </div>

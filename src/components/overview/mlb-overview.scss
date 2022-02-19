@@ -1,0 +1,113 @@
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0 2rem;
+
+  .game-stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    column-gap: 2rem;
+
+    .team-container {
+      flex: 1;
+
+      .roster-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .batter {
+          height: 2rem;
+          border-top: 1px solid #ccc;
+          line-height: 2rem;
+          width: 425px;
+          display: flex;
+
+          .player-name {
+            width: 135px;
+          }
+
+          .player-stats {
+            display: flex;
+            width: 300px;
+
+            div {
+              width: 3rem;
+            }
+          }
+        }
+      }
+
+      .header-container {
+        display: flex;
+
+        .first-stat {
+          padding-left: 5rem;
+        }
+
+        .home-first-stat {
+          padding-left: 4rem;
+        }
+
+        p {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .game-stats-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .overview-container {
+    border-radius: 0px;
+    width: 100%;
+    padding: 0.5rem;
+
+    .game-stats-container {
+      .team-container {
+        .roster-container {
+          .batter {
+            .player-name {
+              width: 120px;
+            }
+
+            .player-stats {
+              width: 250px;
+
+              div {
+                width: 2.5rem;
+              }
+            }
+          }
+        }
+
+        .header-container {
+          display: flex;
+
+          .first-stat {
+            padding-left: 5rem;
+          }
+
+          .home-first-stat {
+            padding-left: 4rem;
+          }
+
+          p {
+            width: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}
