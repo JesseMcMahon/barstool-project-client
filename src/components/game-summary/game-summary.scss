@@ -24,3 +24,9 @@
     color: rgb(60, 124, 219);
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .game-summary-container {
+    font-size: 0.8rem;
+  }
+}

@@ -35,3 +35,21 @@
     padding-bottom: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .nav-container {
+    p {
+      font-size: 1.5rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-container {
+    justify-content: center;
+    p {
+      display: none;
+    }
+  }
+}

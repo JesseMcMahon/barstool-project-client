@@ -1,0 +1,125 @@
+@import "../../../variables.scss";
+
+.nba-overview-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+
+  .game-stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    column-gap: 2rem;
+
+    .team-container {
+      flex: 1;
+
+      .roster-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .batter {
+          height: 2rem;
+          border-top: 1px solid #ccc;
+          line-height: 2rem;
+          display: flex;
+
+          .player-name {
+            width: 135px;
+          }
+
+          .player-stats {
+            display: flex;
+
+            div {
+              width: 3.3rem;
+            }
+          }
+        }
+      }
+
+      .header-container {
+        display: flex;
+
+        .first-stat {
+          padding-left: 5.3rem;
+        }
+
+        .home-first-stat {
+          padding-left: 4rem;
+        }
+
+        p {
+          width: 3.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .nba-overview-container {
+    padding: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    width: 90%;
+    overflow-x: scroll;
+
+    // .game-stats-container {
+    //   text-align: center;
+    //   .team-container {
+    //     .roster-container {
+    //       .batter {
+    //         .player-stats {
+    //           overflow-x: scroll;
+    //           width: auto;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // .game-stats-container {
+    //   .team-container {
+    //     .roster-container {
+    //       .batter {
+    //         width: 350px;
+    //         .player-name {
+    //           width: 120px;
+    //         }
+
+    //         .player-stats {
+    //           width: 250px;
+
+    //           div {
+    //             width: 2.5rem;
+    //           }
+    //         }
+    //       }
+    //     }
+
+    //     .header-container {
+    //       display: flex;
+
+    //       .first-stat {
+    //         padding-left: 5rem;
+    //       }
+
+    //       .home-first-stat {
+    //         padding-left: 4rem;
+    //       }
+
+    //       p {
+    //         width: 2.4rem;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
