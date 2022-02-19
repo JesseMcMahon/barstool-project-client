@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+@import "../../variables.scss";
 
 .scoreboard-container {
   width: fit-content;
@@ -16,7 +16,7 @@
   }
 
   .period {
-    width: 3rem;
+    width: 5rem;
     border-right: 1px solid #ccc;
   }
 
@@ -25,7 +25,7 @@
   }
 
   .inning-container {
-    width: 3rem;
+    width: 5rem;
     border-right: 1px solid #ccc;
   }
 
@@ -46,5 +46,10 @@
     padding: 0 1rem;
     letter-spacing: 0.1rem;
     width: 2rem;
+  }
+
+  .final-column {
+    width: 5rem;
+    background-color: rgb(235, 232, 232);
   }
 }

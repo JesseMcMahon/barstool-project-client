@@ -1,29 +1,10 @@
-import { React, useEffect, useState } from "react";
-import axios from "axios";
-import "./mlb-boxscore.scss";
+import { React, useEffect } from "react";
+import "./boxscore.scss";
 
-const MlbBoxscore = ({ league }) => {
-  const [scoreboard, setScoreboard] = useState();
-  const mlbScoreboardOptions = {
-    innings: 9,
-  };
-
-  const nbaScoreboardOptions = {
-    quarters: 4,
-  };
+const Boxscore = ({ league }) => {
   useEffect(() => {
     console.log(league);
-    if (league) {
-      homeBoxscore();
-    }
   }, [league]);
-
-  const homeBoxscore = () => {
-    console.log(league.data.home_period_scores);
-    league.data.home_period_scores.map((inning) => {
-      return <div>{inning}</div>;
-    });
-  };
 
   return (
     <div className="scoreboard-container">
@@ -35,6 +16,7 @@ const MlbBoxscore = ({ league }) => {
               </div>
             ))
           : null}
+        <div className="final-column">F</div>
       </div>
       <div className="home-container">
         <div className="team-name">
@@ -47,6 +29,12 @@ const MlbBoxscore = ({ league }) => {
               </div>
             ))
           : null}
+        <div className="final-column">
+          {league.data.league === "MLB"
+            ? league.data.away_batter_totals.runs
+            : null}
+          {league.data.league === "NBA" ? league.data.away_totals.points : null}
+        </div>
       </div>
       <div className="away-container">
         <div className="team-name">
@@ -59,9 +47,15 @@ const MlbBoxscore = ({ league }) => {
               </div>
             ))
           : null}
+        <div className="final-column">
+          {league.data.league === "MLB"
+            ? league.data.home_batter_totals.runs
+            : null}
+          {league.data.league === "NBA" ? league.data.home_totals.points : null}
+        </div>
       </div>
     </div>
   );
 };
 
-export default MlbBoxscore;
+export default Boxscore;
