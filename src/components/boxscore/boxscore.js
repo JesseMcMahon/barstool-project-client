@@ -9,26 +9,20 @@ const Boxscore = ({ league }) => {
   return (
     <div className="scoreboard-container">
       <div className="period-container">
-        {league
-          ? league.data.away_period_scores.map((inning, index) => (
-              <div className="period" key={index}>
-                {index + 1}
-              </div>
-            ))
-          : null}
+        {league.data.away_period_scores.map((inning, index) => (
+          <div className="period" key={index}>
+            {index + 1}
+          </div>
+        ))}
         <div className="final-column">F</div>
       </div>
       <div className="home-container">
-        <div className="team-name">
-          {league ? league.data.away_team.abbreviation : null}
-        </div>
-        {league
-          ? league.data.away_period_scores.map((inning, index) => (
-              <div className="inning-container" key={index}>
-                {inning}
-              </div>
-            ))
-          : null}
+        <div className="team-name">{league.data.away_team.abbreviation}</div>
+        {league.data.away_period_scores.map((inning, index) => (
+          <div className="inning-container" key={index}>
+            {inning}
+          </div>
+        ))}
         <div className="final-column">
           {league.data.league === "MLB"
             ? league.data.away_batter_totals.runs
@@ -37,16 +31,12 @@ const Boxscore = ({ league }) => {
         </div>
       </div>
       <div className="away-container">
-        <div className="team-name">
-          {league ? league.data.home_team.abbreviation : null}
-        </div>
-        {league
-          ? league.data.home_period_scores.map((inning, index) => (
-              <div className="inning-container" key={index}>
-                {inning}
-              </div>
-            ))
-          : null}
+        <div className="team-name">{league.data.home_team.abbreviation}</div>
+        {league.data.home_period_scores.map((inning, index) => (
+          <div className="inning-container" key={index}>
+            {inning}
+          </div>
+        ))}
         <div className="final-column">
           {league.data.league === "MLB"
             ? league.data.home_batter_totals.runs

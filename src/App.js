@@ -1,6 +1,7 @@
 import "./App.css";
 import Boxscore from "./components/boxscore/boxscore";
 import Navigation from "./components/navigation/navigation";
+import GameSummary from "./components/game-summary/game-summary";
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 
@@ -22,9 +23,14 @@ function App() {
     setSelectedLeague(league);
   };
   return (
-    <div className="App">
-      <Navigation setLeague={setLeague} />
-      {selectedLeague ? <Boxscore league={selectedLeague} /> : null}
+    <div className="app">
+      {selectedLeague ? (
+        <>
+          <Navigation setLeague={setLeague} />
+          <GameSummary league={selectedLeague} />
+          <Boxscore league={selectedLeague} />
+        </>
+      ) : null}
     </div>
   );
 }

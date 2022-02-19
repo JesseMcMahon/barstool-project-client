@@ -3,11 +3,12 @@
 .scoreboard-container {
   width: fit-content;
   border: 1px solid black;
-  margin: 10rem auto;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   font-family: "Teko", sans-serif;
   font-size: 1.75rem;
+  background-color: #fff;
 
   .period-container {
     display: flex;
