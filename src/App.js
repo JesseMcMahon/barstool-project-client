@@ -15,8 +15,8 @@ function App() {
     axios({
       method: "post",
       data: {
-        previousRequest: selectedLeague,
         currentTime: Date.now(),
+        league: "mlb",
       },
       withCredentials: true,
       url: url,
@@ -25,7 +25,6 @@ function App() {
     });
   }, []);
   const setLeague = (league) => {
-    console.log(league);
     setSelectedLeague(league);
   };
 

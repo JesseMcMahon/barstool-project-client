@@ -2,7 +2,6 @@ import react from "react";
 import "./game-summary.scss";
 
 const GameSummary = ({ league }) => {
-  console.log(league);
   return (
     <div className="game-summary-container">
       <div className="game-status">Final</div>

@@ -4,11 +4,13 @@ import "./navigation.scss";
 
 const Navigation = ({ setLeague }) => {
   const getStats = async (e) => {
+    const league = e.target.id;
     const url = `http://localhost:5000/api/${e.target.id}`;
     await axios({
-      method: "get",
+      method: "post",
       data: {
         currentTime: Date.now(),
+        league: league,
       },
       withCredentials: true,
       url: url,
