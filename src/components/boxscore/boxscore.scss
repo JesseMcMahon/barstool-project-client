@@ -52,6 +52,12 @@
   .final-column {
     width: 5rem;
     background-color: rgb(235, 232, 232);
+
+    .mlb-final-stats {
+      display: flex !important;
+      flex-direction: row;
+      width: 5rem;
+    }
   }
 }
 
