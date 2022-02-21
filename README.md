@@ -5,4 +5,4 @@
 
 ### `npm start`
 
-#### Note: Server must be running since the app makes a request to the api upon rendering
+#### Note: Server must already be running since the app makes a request to the api upon rendering
