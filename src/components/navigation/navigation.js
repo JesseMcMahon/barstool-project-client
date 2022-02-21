@@ -7,6 +7,9 @@ const Navigation = ({ setLeague }) => {
     const url = `http://localhost:5000/api/${e.target.id}`;
     await axios({
       method: "get",
+      data: {
+        currentTime: Date.now(),
+      },
       withCredentials: true,
       url: url,
     }).then((res) => {

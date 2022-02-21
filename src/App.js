@@ -13,7 +13,11 @@ function App() {
   useEffect(() => {
     const url = `http://localhost:5000/api/mlb`;
     axios({
-      method: "get",
+      method: "post",
+      data: {
+        previousRequest: selectedLeague,
+        currentTime: Date.now(),
+      },
       withCredentials: true,
       url: url,
     }).then((res) => {
@@ -24,11 +28,12 @@ function App() {
     console.log(league);
     setSelectedLeague(league);
   };
+
   return (
     <div className="app">
       {selectedLeague ? (
         <>
-          <Navigation setLeague={setLeague} />
+          <Navigation setLeague={setLeague} selectedLeague={selectedLeague} />
           <GameSummary league={selectedLeague} />
           <Boxscore league={selectedLeague} />
           {selectedLeague.data.league === "MLB" ? (
