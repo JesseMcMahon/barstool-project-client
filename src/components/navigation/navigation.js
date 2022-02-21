@@ -5,7 +5,7 @@ import "./navigation.scss";
 const Navigation = ({ setLeague }) => {
   const getStats = async (e) => {
     const league = e.target.id;
-    const url = `http://localhost:5000/api/${e.target.id}`;
+    const url = `http://localhost:5000/api`;
     await axios({
       method: "post",
       data: {

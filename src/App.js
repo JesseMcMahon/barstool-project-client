@@ -11,7 +11,7 @@ function App() {
   const [selectedLeague, setSelectedLeague] = useState();
 
   useEffect(() => {
-    const url = `http://localhost:5000/api/mlb`;
+    const url = `http://localhost:5000/api`;
     axios({
       method: "post",
       data: {

@@ -2,10 +2,6 @@ import { React, useEffect } from "react";
 import "./boxscore.scss";
 
 const Boxscore = ({ league }) => {
-  useEffect(() => {
-    console.log(league);
-  }, [league]);
-
   return (
     <div className="scoreboard-container">
       <div className="period-container">
