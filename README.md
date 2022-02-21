@@ -1,4 +1,3 @@
-# Getting Started with Create React App
 
 ## Steps to get app running
 
@@ -6,4 +5,4 @@
 
 ### `npm start`
 
-
+#### Note: Server must be running since the app makes a request to the api upon rendering
