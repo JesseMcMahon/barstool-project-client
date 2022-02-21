@@ -1,9 +1,8 @@
-import react from "react";
 import "./game-summary.scss";
 
 const GameSummary = ({ league }) => {
   return (
-    <div className="game-summary-container">
+    <section className="game-summary-container">
       <div className="game-status">Final</div>
       <div className="game-details">
         <div className="away-section">
@@ -29,7 +28,7 @@ const GameSummary = ({ league }) => {
           </h1>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./nba-overview.scss";
 
 const NbaOverview = ({ league }) => {
@@ -7,9 +6,10 @@ const NbaOverview = ({ league }) => {
   const awayPlayers = stats.away_stats.map((player, index) => {
     let abbreviatedName = player.first_name.slice(0, 1) + ".";
     return (
-      <div className="batter" key={index}>
+      <div className="player" key={index}>
         <div className="player-name">
           {abbreviatedName} {player.last_name}
+          <span>{player.position}</span>
         </div>
         <div className="player-stats">
           <div>{player.minutes}</div>
@@ -39,9 +39,10 @@ const NbaOverview = ({ league }) => {
   const homePlayers = stats.home_stats.map((player, index) => {
     let abbreviatedName = player.first_name.slice(0, 1) + ".";
     return (
-      <div className="batter" key={index}>
+      <div className="player" key={index}>
         <div className="player-name">
           {abbreviatedName} {player.last_name}
+          <span>{player.position}</span>
         </div>
         <div className="player-stats">
           <div>{player.minutes}</div>
@@ -68,7 +69,7 @@ const NbaOverview = ({ league }) => {
     );
   });
   return (
-    <div className="nba-overview-container">
+    <section className="nba-overview-container">
       <h3>Overview</h3>
       <div className="game-stats-container">
         <div className="team-container">
@@ -112,7 +113,7 @@ const NbaOverview = ({ league }) => {
           <div className="roster-container">{homePlayers}</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

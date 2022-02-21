@@ -19,13 +19,15 @@
 
     .team-container {
       flex: 1;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1rem;
 
       .roster-container {
         display: flex;
         flex-direction: column;
         text-align: left;
 
-        .batter {
+        .player {
           height: 2rem;
           border-top: 1px solid #ccc;
           line-height: 2rem;
@@ -33,6 +35,12 @@
 
           .player-name {
             width: 135px;
+
+            span {
+              color: #727070;
+              font-size: 0.8rem;
+              padding-left: 5px;
+            }
           }
 
           .player-stats {
@@ -71,56 +79,5 @@
     margin: 0 auto;
     width: 90%;
     overflow-x: scroll;
-
-    // .game-stats-container {
-    //   .team-container {
-    //     .roster-container {
-    //       width: 100%;
-    //       color: blue;
-    //       .batter {
-    //         .player-stats {
-    //           overflow-x: scroll;
-    //           width: 100%;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-    // .game-stats-container {
-    //   .team-container {
-    //     .roster-container {
-    //       .batter {
-    //         width: 350px;
-    //         .player-name {
-    //           width: 120px;
-    //         }
-
-    //         .player-stats {
-    //           width: 250px;
-
-    //           div {
-    //             width: 2.5rem;
-    //           }
-    //         }
-    //       }
-    //     }
-
-    //     .header-container {
-    //       display: flex;
-
-    //       .first-stat {
-    //         padding-left: 5rem;
-    //       }
-
-    //       .home-first-stat {
-    //         padding-left: 4rem;
-    //       }
-
-    //       p {
-    //         width: 2.4rem;
-    //       }
-    //     }
-    //   }
-    // }
   }
 }

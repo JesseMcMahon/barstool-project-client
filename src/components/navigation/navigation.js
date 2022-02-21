@@ -1,4 +1,3 @@
-import { React, useState } from "react";
 import axios from "axios";
 import "./navigation.scss";
 
@@ -20,7 +19,7 @@ const Navigation = ({ setLeague }) => {
   };
 
   return (
-    <div className="nav-container">
+    <nav>
       <div>
         <button id="nba" onClick={getStats}>
           NBA
@@ -32,7 +31,7 @@ const Navigation = ({ setLeague }) => {
       <div>
         <p>Barstool Sports Network</p>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -2,7 +2,7 @@ import "./App.css";
 import Boxscore from "./components/boxscore/boxscore";
 import Navigation from "./components/navigation/navigation";
 import GameSummary from "./components/game-summary/game-summary";
-import MlbOverview from "./components/overview/mlb-overview";
+import MlbOverview from "./components/overview/mlb/mlb-overview";
 import NbaOverview from "./components/overview/nba/nba-overview";
 import { React, useEffect, useState } from "react";
 import axios from "axios";

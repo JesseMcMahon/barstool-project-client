@@ -1,4 +1,3 @@
-import React from "react";
 import "./mlb-overview.scss";
 
 const MlbOverview = ({ league }) => {
@@ -10,6 +9,7 @@ const MlbOverview = ({ league }) => {
       <div className="batter" key={index}>
         <div className="player-name">
           {abbreviatedName} {player.last_name}
+          <span>{player.position}</span>
         </div>
         <div className="player-stats">
           <div>{player.at_bats}</div>
@@ -29,6 +29,7 @@ const MlbOverview = ({ league }) => {
       <div className="batter" key={index}>
         <div className="player-name">
           {abbreviatedName} {player.last_name}
+          <span>{player.position}</span>
         </div>
         <div className="player-stats">
           <div>{player.at_bats}</div>
@@ -42,7 +43,7 @@ const MlbOverview = ({ league }) => {
     );
   });
   return (
-    <div className="overview-container">
+    <section className="overview-container">
       <h3>Overview</h3>
       <div className="game-stats-container">
         <div className="team-container">
@@ -74,7 +75,7 @@ const MlbOverview = ({ league }) => {
           <div className="roster-container">{homePlayers}</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

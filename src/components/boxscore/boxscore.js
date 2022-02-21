@@ -1,9 +1,8 @@
-import { React, useEffect } from "react";
 import "./boxscore.scss";
 
 const Boxscore = ({ league }) => {
   return (
-    <div className="scoreboard-container">
+    <section className="scoreboard-container">
       <div className="period-container">
         {league.data.away_period_scores.map((inning, index) => (
           <div className="period" key={index}>
@@ -40,7 +39,7 @@ const Boxscore = ({ league }) => {
           {league.data.league === "NBA" ? league.data.home_totals.points : null}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
